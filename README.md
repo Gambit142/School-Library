@@ -29,4 +29,4 @@ Give a ⭐️ if you like this project!
 ## Acknowledgments
 - To [Microverse](https://www.microverse.org/)
 ## 📝 License
-- This project is [MIT](./LICENSE) licensed.
+- This project is [MIT](./MIT.md) licensed.
