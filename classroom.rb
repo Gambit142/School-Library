@@ -12,6 +12,3 @@ class Classroom
     student.classroom = self
   end
 end
-
-classroom_1 = Classroom.new('A')
-classroom_1.add_student(student)

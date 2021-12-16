@@ -1,6 +1,6 @@
 require_relative './corrector'
-require './rental.rb'
-require './book.rb'
+require './rental'
+require './book'
 
 class Person
   attr_reader :id
