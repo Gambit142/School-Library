@@ -1,8 +1,14 @@
 # School-Library
 A tool that records what books are in a library and who borrows them
 
-## Built With
+## Screenshots
 
+> |Screenshot1|Screenshots2|
+> |--------------|----------------|
+> |![screenshot](./Screenshot.png)|![screenshot2](./Screenshot2.png)|!
+
+
+## Built With
 - Ruby
 
 ## Getting Started
@@ -15,6 +21,13 @@ A tool that records what books are in a library and who borrows them
 - **$ cd ...**
 - **$ git checkout ...**
 - **$ run `bundle install` to couple all dependecies**
+
+## Authors
+
+👨🏿 **Francis Ugorji**
+
+- GitHub: [@Gambit142](https://github.com/Gambit142)
+- LinkedIn: [Francis Ugorji](https://www.linkedin.com/in/francis-ugorji/)
 
 ## 🤝 Contributing
 
