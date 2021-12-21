@@ -2,6 +2,7 @@ require './rental_options'
 
 class BookOptions
   attr_reader :books
+
   def initialize
     @books = []
   end

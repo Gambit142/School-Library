@@ -1,5 +1,6 @@
 class PeopleOptions
   attr_reader :person_array
+
   def initialize
     @person_array = []
   end
@@ -7,21 +8,21 @@ class PeopleOptions
   def create_student(age, name, permission)
     student = Student.new(age, name, parent_permission: permission)
     @person_array.push({
-                          output: "[Student] Name: #{student.name}, ID: #{student.id}, Age: #{student.age}",
-                          object: student
-                        })
+                         output: "[Student] Name: #{student.name}, ID: #{student.id}, Age: #{student.age}",
+                         object: student
+                       })
     puts 'Person created successfully!'
     puts "\n"
   end
 
   def create_teacher(age, name, specialization)
     teacher = Teacher.new(age, name, specialization)
-      @person_array.push({
-                           output: "[Teacher] Name: #{teacher.name}, ID: #{teacher.id}, Age: #{teacher.age}",
-                           object: teacher
-                         })
-      puts 'Person created successfully!'
-      puts "\n"
+    @person_array.push({
+                         output: "[Teacher] Name: #{teacher.name}, ID: #{teacher.id}, Age: #{teacher.age}",
+                         object: teacher
+                       })
+    puts 'Person created successfully!'
+    puts "\n"
   end
 
   def create_person

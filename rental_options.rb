@@ -1,8 +1,9 @@
-require './book_options.rb'
-require './people_options.rb'
+require './book_options'
+require './people_options'
 
 class RentalOptions
   attr_reader :books, :person_array
+
   def initialize
     @rental_array = []
   end
