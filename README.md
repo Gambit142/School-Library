@@ -22,12 +22,18 @@ A tool that records what books are in a library and who borrows them
 - **$ git checkout ...**
 - **$ run `bundle install` to couple all dependecies**
 
-## Authors
+## Author 1
 
 👨🏿 **Francis Ugorji**
 
 - GitHub: [@Gambit142](https://github.com/Gambit142)
 - LinkedIn: [Francis Ugorji](https://www.linkedin.com/in/francis-ugorji/)
+
+## Author 2
+
+👨🏿 **Ajise Toluwase**
+- GitHub: [@githubhandle](https://github.com/Whoistolu)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/toluwase-ajise-9b40411b2/)
 
 ## 🤝 Contributing
 
