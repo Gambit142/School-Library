@@ -1,26 +1,41 @@
+require 'json'
+
 class PeopleOptions
   attr_reader :person_array
 
   def initialize
     @person_array = []
+
+    return unless File.exist?('./json/person.json')
+
+    file = File.read('./json/person.json')
+    file_data = JSON.parse(file)
+    file_data.each do |person|
+      if person['specialization']
+        @person_array.push(Teacher.new(person['age'], person['name'], person['specialization'], id: person['id']))
+      else
+        @person_array.push(Student.new(person['age'], person['name'], id: person['id'],
+                                                                      parent_permission: person['parent_permission']))
+      end
+    end
+  end
+
+  def save_data
+    File.write('./json/person.json', JSON.dump(@person_array))
   end
 
   def create_student(age, name, permission)
     student = Student.new(age, name, parent_permission: permission)
-    @person_array.push({
-                         output: "[Student] Name: #{student.name}, ID: #{student.id}, Age: #{student.age}",
-                         object: student
-                       })
+    @person_array.push(student)
+    save_data
     puts 'Person created successfully!'
     puts "\n"
   end
 
   def create_teacher(age, name, specialization)
     teacher = Teacher.new(age, name, specialization)
-    @person_array.push({
-                         output: "[Teacher] Name: #{teacher.name}, ID: #{teacher.id}, Age: #{teacher.age}",
-                         object: teacher
-                       })
+    @person_array.push(teacher)
+    save_data
     puts 'Person created successfully!'
     puts "\n"
   end
@@ -64,7 +79,7 @@ class PeopleOptions
 
   def people_list
     @person_array.each do |person|
-      puts person[:output]
+      puts person
     end
   end
 end
