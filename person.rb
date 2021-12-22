@@ -3,11 +3,12 @@ require './rental'
 require './book'
 
 class Person
-  attr_reader :id
+  attr_reader :id, :parent_permission
   attr_accessor :name, :age, :rentals
 
-  def initialize(age, name = 'Unknown', parent_permission: true)
-    @id = rand 1..1000
+  def initialize(id, age, name = 'Unknown', parent_permission: true)
+    @id = id
+    @id = rand 1..1000 if @id.nil?
     @name = name
     @age = age
     @parent_permission = parent_permission
