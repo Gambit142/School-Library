@@ -10,6 +10,7 @@ require './rental_options'
 puts 'Welcome to the OOP School Library App!'
 class ListOptions
   def self.question_page
+    Dir.mkdir'json' unless Dir.exist? 'json'
     puts "\n"
     puts 'Please choose an option by entering a number: '
     option1 = '1 - List all books'

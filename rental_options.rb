@@ -3,7 +3,7 @@ class RentalOptions
     @rental_array = []
 
     return unless File.exist?('./json/rental.json')
-
+    
     file = File.read('./json/rental.json')
     file_data = JSON.parse(file)
     file_data.each do |rental|
